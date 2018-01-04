@@ -19,6 +19,12 @@ open https://127.0.0.1:8443 by browser.
 
 `Ctl + C` to stop containers.
 
+### Updating image
+
+```
+$ docker-compose pull
+```
+
 ### Storage Info
 
 - `./volume/app`: `wordpress/wp-content` files
