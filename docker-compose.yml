@@ -1,0 +1,24 @@
+version: '3'
+services:
+  wp:
+    image: getshifter/shifter_local:latest
+    links:
+      - mysql
+    ports:
+      - 8443:443
+    volumes:
+      - "./volume/app:/var/www/html/web/wp/wp-content"
+    environment:
+      - SERVICE_PORT=8443
+      - RDB_ENDPOINT=mysql:3306
+      - RDB_USER=shifter
+      - RDB_PASSWD=pass
+  mysql:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=shifter
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - "./volume/db:/var/lib/mysql"
