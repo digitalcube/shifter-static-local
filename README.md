@@ -28,6 +28,9 @@ Even once you stopped containers which running under docker-compose, your instal
 
 To start over from installation, delete `./volume/`.
 
+## Limitations
+
+- Depending on the environment you can not send mail from this container. Example: Under `Outbound Port 25 Blocking`
 
 ## Disclaimer
 
