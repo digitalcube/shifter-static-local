@@ -1,6 +1,6 @@
 # SHIFTER-LOCAL
 
-Run [Shifter](https://getshifter.io/) WordPress image localy for checking and correcting the behavior of plugins and themes.
+Run [Shifter](https://getshifter.io/) WordPress image localy for checking and correcting the behavior of plugins and themes. The image is released at [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
 
 ## Requirements
 
