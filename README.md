@@ -9,10 +9,26 @@ Run [Shifter](https://getshifter.io/) WordPress Image Localy. It is used for che
 
 ## Usage
 
+
 ```
 $ git clone https://github.com/getshifter/shifter_local.git
 $ cd shifter_local
+```
+
+### for macos
+
+```
 $ docker-compose up
+```
+
+open https://127.0.0.1:8443 by browser.
+
+### for linux
+
+due to file permission problem, we reccomend use volumes.
+
+```
+$ docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
 ```
 
 open https://127.0.0.1:8443 by browser.
@@ -27,8 +43,12 @@ $ docker-compose pull
 
 ### Storage Info
 
-- `./volume/app`: `wordpress/wp-content` files
-- `./volume/db`: `mysql databases
+- MacOS
+  - `./volume/app`: `wordpress/wp-content` files
+  - `./volume/db`: `mysql databases
+- Linux (you can detect path by `docker volume inspect`)
+  - `/var/lib/docker/volumes/shifterlocal_app/_data`: `wordpress/wp-content` files
+  - `/var/lib/docker/volumes/shifterlocal_db/_data`: `mysql databases
 
 Even once you stopped containers which running under docker-compose, your installation will be kept in those directories.
 
