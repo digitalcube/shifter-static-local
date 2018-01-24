@@ -1,6 +1,6 @@
 # SHIFTER-LOCAL
 
-Run [Shifter](https://getshifter.io/) WordPress Image Localy. It is used for checking and correcting the behavior of plugins and themes.
+Run [Shifter](https://getshifter.io/) WordPress image localy for checking and correcting the behavior of plugins and themes. The image is released at [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
 
 ## Requirements
 
@@ -45,19 +45,19 @@ $ docker-compose pull
 
 - MacOS
   - `./volume/app`: `wordpress/wp-content` files
-  - `./volume/db`: `mysql databases
+  - `./volume/db`: `mysql` databases
 - Linux (you can detect path by `docker volume inspect`)
   - `/var/lib/docker/volumes/shifterlocal_app/_data`: `wordpress/wp-content` files
-  - `/var/lib/docker/volumes/shifterlocal_db/_data`: `mysql databases
+  - `/var/lib/docker/volumes/shifterlocal_db/_data`: `mysql` databases
 
-Even once you stopped containers which running under docker-compose, your installation will be kept in those directories.
+All data will be persisted in these directories, even if the Docker containers are stopped.
 
-To start over from installation, delete `./volume/`.
+To start over with the installation, simply delete `./volume/`.
 
 ## Limitations
 
-- Depending on the environment you can not send mail from this container. Example: Under `Outbound Port 25 Blocking`
+- Depending on the environment, you can not send mail from this container. Example: Under `Outbound Port 25 Blocking`
 
 ## Disclaimer
 
-This Docker image is almost same as the one used by Shifter, but it does not guarantee compatibility completely.
+This Docker image is similar to the one used by Shifter, but does not guarantee complete compatibility.
