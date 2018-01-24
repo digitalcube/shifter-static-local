@@ -1,0 +1,14 @@
+version: '3'
+services:
+  wp:
+    volumes:
+      - "app:/var/www/html/web/wp/wp-content"
+  mysql:
+    image: mysql:5.6
+    volumes:
+      - "db:/var/lib/mysql"
+
+volumes:
+  app:
+  db:
+
