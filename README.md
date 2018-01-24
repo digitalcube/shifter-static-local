@@ -52,7 +52,7 @@ $ docker-compose pull
 
 All data will be persisted in these directories, even if the Docker containers are stopped.
 
-To start over with the installation, simply delete `./volume/`.
+To start over with the installation, simply delete `./volume/` of `docker volume rm`.
 
 ## Limitations
 
