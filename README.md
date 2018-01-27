@@ -1,52 +1,53 @@
-# SHIFTER-LOCAL
+# Shifter - Local
 
-Run [Shifter](https://getshifter.io/) WordPress image localy for checking and correcting the behavior of plugins and themes. The image is released at [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
+Docker image for testing WordPress themes and plugins while migrating to Shifter. This image is also available on [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
 
 ## Requirements
 
 - docker
 - docker-compose
 
-## Usage
-
-
-```
-$ git clone https://github.com/getshifter/shifter_local.git
-$ cd shifter_local
-```
-
-### for macos
+## Setup
 
 ```
-$ docker-compose up
+git clone https://github.com/getshifter/shifter_local.git
+```
+```
+cd shifter-local
 ```
 
-open https://127.0.0.1:8443 by browser.
-
-### for linux
-
-due to file permission problem, we reccomend use volumes.
+### macOS
 
 ```
-$ docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
+docker-compose up
 ```
 
-open https://127.0.0.1:8443 by browser.
+Visit https://127.0.0.1:8443 in your browser.
+
+### Linux
+
+due to file permission problem, we recommend using volumes.
+
+```
+docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
+```
+
+Visit https://127.0.0.1:8443 in your browser.
 
 `Ctl + C` to stop containers.
 
-### Updating image
+### Updating Docker Image
 
 ```
-$ docker-compose pull
+docker-compose pull
 ```
 
-### Storage Info
+### Storage
 
 - MacOS
   - `./volume/app`: `wordpress/wp-content` files
   - `./volume/db`: `mysql` databases
-- Linux (you can detect path by `docker volume inspect`)
+- Linux (detect path using `docker volume inspect`)
   - `/var/lib/docker/volumes/shifterlocal_app/_data`: `wordpress/wp-content` files
   - `/var/lib/docker/volumes/shifterlocal_db/_data`: `mysql` databases
 
@@ -54,9 +55,9 @@ All data will be persisted in these directories, even if the Docker containers a
 
 To start over with the installation, simply delete `./volume/` of `docker volume rm`.
 
-## Limitations
+## Considerations
 
-- Depending on the environment, you can not send mail from this container. Example: Under `Outbound Port 25 Blocking`
+- Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
 
 ## Disclaimer
 
