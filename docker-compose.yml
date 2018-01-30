@@ -13,6 +13,7 @@ services:
       - RDB_ENDPOINT=mysql:3306
       - RDB_USER=shifter
       - RDB_PASSWD=pass
+      - SHIFTER_LOCAL=true
   mysql:
     image: mysql:5.6
     environment:
