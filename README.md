@@ -7,34 +7,30 @@ Docker image for testing WordPress themes and plugins while migrating to Shifter
 - docker
 - docker-compose
 
-## Setup
+## Getting Started
 
 ```
-git clone https://github.com/getshifter/shifter_local.git
+git clone https://github.com/getshifter/shifter-local.git
 ```
 ```
 cd shifter-local
 ```
 
-### macOS
-
 ```
 docker-compose up
 ```
 
-Visit https://127.0.0.1:8443 in your browser.
+Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
+
+Use `Ctl + C` in your terminal window to stop running containers.
 
 ### Linux
 
-due to file permission problem, we recommend using volumes.
+Considering file permissions, we recommend using volumes on Linux.
 
 ```
 docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
 ```
-
-Visit https://127.0.0.1:8443 in your browser.
-
-`Ctl + C` to stop containers.
 
 ### Updating Docker Image
 
@@ -55,19 +51,21 @@ All data will be persisted in these directories, even if the Docker containers a
 
 To start over with the installation, simply delete `./volume/` of `docker volume rm`.
 
-## Debug your environment
+## Debugging
 
-You can find and solve issues before Generator fails.
+Some plugins and themes may conflict with Shifter. Conflicts usually cause the Generator to hang or fail. Here are a few tips.
 
-### Check 1. Contents lists are valid JSON format.
+### Check for a valid JSON format
 
-Some plugins and themes may conflict with Shifter's generator plugin and may break your site.
+Your site should return a list of valid URLs in JSON format for Shifter to crawl for generating.
 
-After instaling themes or plugins, please accessing following URL before generating to check WordPress is returning valid JSON format, 
+Add `?url=0` to the websites URL to test.
 
-`https://127.0.0.1:8443?urls=0`
+[https://127.0.0.1:8443?urls=0](`https://127.0.0.1:8443?urls=0`)
 
-> Notice: In the production Shifter environment, PHP's Warning and Notice are suppressed only at the time of Generate.
+### Displaying PHP Errors
+
+While running your site on Shifters [production](https://go.getshifter.io) environment PHP warning are suppressed. These warning if any are visible while running Shifter-Local for debugging your theme.
 
 ## Considerations
 
