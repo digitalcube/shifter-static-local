@@ -65,8 +65,9 @@ Some plugins and themes may conflict with Shifter's generator plugin and may bre
 
 After instaling themes or plugins, please accessing following URL before generating to check WordPress is returning valid JSON format, 
 
-https://127.0.0.1:8443?urls=0
+`https://127.0.0.1:8443?urls=0`
 
+> Notice: In the production Shifter environment, PHP's Warning and Notice are suppressed only at the time of Generate.
 
 ## Considerations
 
