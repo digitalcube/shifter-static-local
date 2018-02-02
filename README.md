@@ -55,6 +55,19 @@ All data will be persisted in these directories, even if the Docker containers a
 
 To start over with the installation, simply delete `./volume/` of `docker volume rm`.
 
+## Debug your environment
+
+You can find and solve issues before Generator fails.
+
+### Check 1. Contents lists are valid JSON format.
+
+Some plugins and themes may conflict with Shifter's generator plugin and may break your site.
+
+After instaling themes or plugins, please accessing following URL before generating to check WordPress is returning valid JSON format, 
+
+https://127.0.0.1:8443?urls=0
+
+
 ## Considerations
 
 - Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
