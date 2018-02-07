@@ -63,6 +63,16 @@ Add `?url=0` to the websites URL to test.
 
 [https://127.0.0.1:8443?urls=0](`https://127.0.0.1:8443?urls=0`)
 
+### Check for list of all target pages
+
+If the number of pages to be generated is more than 100, you can check the target by 100 pages by increasing the number of the urls parameter. (e.g. urls=1, urls=2)
+
+Pages that do not appear in this list are not subject to generate.
+
+Common problems and solutions when there are no pages in the list are as follows.
+
+- pagination issues. (Work in progress)
+
 ### Displaying PHP Errors
 
 While running your site on Shifters [production](https://go.getshifter.io) environment PHP warning are suppressed. These warning if any are visible while running Shifter-Local for debugging your theme.
