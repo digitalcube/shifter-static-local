@@ -20,7 +20,8 @@ jobs:
           command: |
             set -x
             docker-compose -f docker-compose.yml -f docker-compose_linux.yml up -d
-            docker-compose exec wp curl -ksfI --retry 10 --retry-delay 5 --retry-connrefused https://localhost/wp-admin/install.php
+            sleep 30
+            docker-compose exec wp curl -ksfI --retry 10 --retry-delay 5 --retry-connrefused https://127.0.0.1/wp-admin/install.php
 
 workflows:
   version: 2
