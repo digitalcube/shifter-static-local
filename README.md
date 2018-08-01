@@ -1,5 +1,7 @@
 # Shifter - Local
 
+[![CircleCI](https://circleci.com/gh/getshifter/shifter-local/tree/master.svg?style=svg)](https://circleci.com/gh/getshifter/shifter-local/tree/master)
+
 Docker image for testing WordPress themes and plugins while migrating to Shifter. This image is also available on [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
 
 ## Requirements
