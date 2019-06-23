@@ -6,6 +6,16 @@
 
 Docker image for testing WordPress themes and plugins while migrating to Shifter. This image is also available on [Dockerhub](https://hub.docker.com/r/getshifter/shifter_local/).
 
+## Limitations
+
+Shifter-Local is released for the purpose of only checking the operation of WordPress theme and plug-in in Shifter platform.
+
+The following features, combined with the Shifter platform. do not work on Shifter-Local.
+
+- All Shifter menus in WordPress dashboard
+  - Terminate, Generate, or etc...
+- Passwordless login
+
 ## Requirements
 
 - docker
