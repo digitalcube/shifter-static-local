@@ -52,6 +52,17 @@ docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
 docker-compose pull
 ```
 
+### Change base PHP version
+
+modify `docker-compose.yml` like below
+
+```
+-    image: getshifter/shifter_local:latest
++    image: getshifter/shifter_local:7.3
+```
+
+- avaliable tags => [getshifter/shifter_local Tags - Docker Hub](https://hub.docker.com/r/getshifter/shifter_local/tags)
+
 ### Storage
 
 - MacOS
