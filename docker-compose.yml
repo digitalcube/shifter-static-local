@@ -23,4 +23,5 @@ services:
       - MYSQL_PASSWORD=pass
       - MYSQL_DATABASE=wordpress
     volumes:
+      - "./mysql.append.cnf:/etc/mysql/mysql.conf.d/mysql.append.cnf"
       - "./volume/db:/var/lib/mysql"
