@@ -16,7 +16,7 @@ services:
       - SHIFTER_LOCAL=true
       # - SERVICE_TYPE=generator # to simulate generator environment
   mysql:
-    image: mysql:5.6
+    image: mysql:5.7
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
       - MYSQL_USER=shifter
@@ -25,3 +25,5 @@ services:
     volumes:
       - "./mysql.append.cnf:/etc/mysql/mysql.conf.d/mysql.append.cnf"
       - "./volume/db:/var/lib/mysql"
+    command:
+      - --sql-mode=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
