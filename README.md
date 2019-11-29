@@ -58,7 +58,7 @@ modify `docker-compose.yml` like below
 
 ```
 -    image: getshifter/shifter_local:latest
-+    image: getshifter/shifter_local:7.3
++    image: getshifter/shifter_local:7.4
 ```
 
 - avaliable tags => [getshifter/shifter_local Tags - Docker Hub](https://hub.docker.com/r/getshifter/shifter_local/tags)
@@ -74,7 +74,16 @@ modify `docker-compose.yml` like below
 
 All data will be persisted in these directories, even if the Docker containers are stopped.
 
-To start over with the installation, simply delete `./volume/` of `docker volume rm`.
+To start over with the installation, simply run `make clean`.
+
+### Upgrade mysql 5.6 to 5.7
+
+The included mysql version has been changed from 5.6 to 5.7.
+If you want to keep the data, you can upgrade after starting docker-compose with the following command.
+
+```
+$ make mysql_upgrade
+```
 
 ## Debugging
 
