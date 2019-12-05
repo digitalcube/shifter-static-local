@@ -52,6 +52,11 @@ docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
 docker-compose pull
 ```
 
+You can use any tag from the following provided.
+
+- `latest`, `7.3`: Similar as Shifter production environment.
+- `develop`, `7.4`: development edge.
+
 ### Change base PHP version
 
 modify `docker-compose.yml` like below
