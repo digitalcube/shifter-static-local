@@ -52,6 +52,11 @@ docker-compose -f docker-compose.yml -f docker-compose_linux.yml up
 docker-compose pull
 ```
 
+You can use any tag from the following provided.
+
+- `latest`, `7.3`: Similar as Shifter production environment.
+- `develop`, `7.4`: development edge.
+
 ### Change base PHP version
 
 modify `docker-compose.yml` like below
@@ -110,6 +115,13 @@ Common problems and solutions when there are no pages in the list are as follows
 ### Displaying PHP Errors
 
 While running your site on Shifters [production](https://go.getshifter.io) environment PHP warning are suppressed. These warning if any are visible while running Shifter-Local for debugging your theme.
+
+### Work in subdirectory
+
+To use WordPress like subdirectory installation, follow the steps below.
+
+- open `docker-compose.yml` to edit
+- remove `#` from `SITE_SUBDIR` line and set subdirectory name
 
 ## Considerations
 
