@@ -111,6 +111,13 @@ Common problems and solutions when there are no pages in the list are as follows
 
 While running your site on Shifters [production](https://go.getshifter.io) environment PHP warning are suppressed. These warning if any are visible while running Shifter-Local for debugging your theme.
 
+### Work in subdirectory
+
+To use WordPress like subdirectory installation, follow the steps below.
+
+- open `docker-compose.yml` to edit
+- remove `#` from `SITE_SUBDIR` line and set subdirectory name
+
 ## Considerations
 
 - Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
