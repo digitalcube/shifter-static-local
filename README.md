@@ -31,12 +31,20 @@ cd shifter-local
 ```
 
 ```
-docker-compose up -d
+docker-compose up
 ```
 
 Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
 
 Use `Ctl + C` in your terminal window to stop running containers.
+
+
+to run in the background, use `-d` option.
+
+```
+docker-compose up -d
+```
+
 
 ### Linux
 
