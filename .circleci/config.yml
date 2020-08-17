@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  slack: circleci/slack@3.4.2
 
 jobs:
   build:
@@ -23,6 +25,8 @@ jobs:
             docker-compose -f docker-compose.yml -f docker-compose_linux.yml up -d
             sleep 30
             docker-compose exec wp curl -ksfI --retry 10 --retry-delay 5 --retry-connrefused https://127.0.0.1/wp-admin/install.php
+      - slack/status:
+          fail_only: true
 
 workflows:
   version: 2
