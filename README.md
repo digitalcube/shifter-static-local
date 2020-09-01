@@ -1,6 +1,6 @@
 # Shifter - Local
 
-[![CircleCI](https://circleci.com/gh/getshifter/shifter-local/tree/master.svg?style=svg)](https://circleci.com/gh/getshifter/shifter-local/tree/master)
+[![CircleCI](https://circleci.com/gh/getshifter/shifter-local/tree/main.svg?style=svg)](https://circleci.com/gh/getshifter/shifter-local/tree/main)
 
 [![shifter_local](http://dockeri.co/image/getshifter/shifter_local)](https://hub.docker.com/r/getshifter/shifter_local/)
 
