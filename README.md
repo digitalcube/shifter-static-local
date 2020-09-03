@@ -62,8 +62,8 @@ docker-compose pull
 
 You can use any tag from the following provided.
 
-- `latest`, `7.3`: Similar as Shifter production environment.
-- `develop`, `7.4`: development edge.
+- `latest`, `7.4`: Similar as Shifter production environment.
+- `develop`: development edge.
 
 ### Change base PHP version
 
