@@ -1,4 +1,4 @@
-# Shifter - Local
+# Shifter (Static) - Local
 
 [![CircleCI](https://circleci.com/gh/getshifter/shifter-local/tree/main.svg?style=svg)](https://circleci.com/gh/getshifter/shifter-local/tree/main)
 
