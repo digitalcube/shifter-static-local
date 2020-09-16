@@ -26,7 +26,7 @@ The following features, combined with the Shifter platform. do not work on Shift
 ## Getting Started
 
 ```
-git clone https://github.com/getshifter/shifter-local.git
+git clone https://github.com/digitalcube/shifter-static-local.git
 ```
 ```
 cd shifter-local
