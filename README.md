@@ -133,6 +133,21 @@ To use WordPress like subdirectory installation, follow the steps below.
 - open `docker-compose.yml` to edit
 - remove `#` from `SITE_SUBDIR` line and set subdirectory name
 
+### Run WP-CLI in Container
+
+```
+$ docker-compose exec --workdir /var/www/html/web/wp --user www-data wp /usr/local/bin/wp --version
+WP-CLI 2.4.0
+```
+
+#### Example: force update user password
+
+```
+$ docker-compose exec --workdir /var/www/html/web/wp --user www-data wp /usr/local/bin/wp user update 1 --user_pass=TYPE-NEW-PASSWORD
+
+Success: Updated user 1.
+```
+
 ## Considerations
 
 - Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
