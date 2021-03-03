@@ -148,6 +148,15 @@ $ docker-compose exec --workdir /var/www/html/web/wp --user www-data wp /usr/loc
 Success: Updated user 1.
 ```
 
+#### Example: force update Core to Release Candidate
+
+```
+$ docker-compose exec --workdir /var/www/html/web/wp --user www-data wp /usr/local/bin/wp core update --version=5.7-RC2
+
+Success: WordPress updated successfully.
+```
+
+
 ## Considerations
 
 - Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
