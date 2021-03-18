@@ -1,7 +1,5 @@
 # Shifter (Static) - Local
 
-<img src="https://api.develop.getshifter.io/wp-content/uploads/2020/03/Shifter_Primary_RGB-2.png" width=50%>
-
 [![CircleCI](https://circleci.com/gh/digitalcube/shifter-static-local/tree/main.svg?style=svg)](https://circleci.com/gh/getshifter/shifter-local/tree/main)
 
 [![shifter_local](http://dockeri.co/image/getshifter/shifter_local)](https://hub.docker.com/r/getshifter/shifter_local/)
