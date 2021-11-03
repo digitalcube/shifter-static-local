@@ -1,0 +1,32 @@
+version: '3'
+services:
+  wp:
+    image: getshifter/shifter_local:latest
+    links:
+      - mysql
+    ports:
+      - 8443:443
+    volumes:
+      - "./volume/app:/var/www/html/web/wp/wp-content"
+    environment:
+      - SERVICE_PORT=8443
+      # - SERVICE_DOMAIN=127.0.0.1
+      - RDB_ENDPOINT=mysql:3306
+      - RDB_USER=shifter
+      - RDB_PASSWD=pass
+      - SHIFTER_LOCAL=true
+      # - SITE_SUBDIR=subdirpath # run /subdirpath
+      # - SERVICE_TYPE=generator # to simulate generator environment
+  mysql:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=shifter
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - "./mysql.append.cnf:/etc/mysql/mysql.conf.d/mysql.append.cnf"
+      - "./volume/db:/var/lib/mysql"
+    command:
+      - --sql-mode=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
