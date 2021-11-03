@@ -1,10 +1,14 @@
 {
   "name": "shifter-local",
   "version": "1.0.0",
-  "description": "Docker image for testing WordPress themes and plugins while migrating to Shifter. This image is also available on [Dockerhub](https://hub.docker.com/r/getshifter/shifter-local/).",
+  "description": "Docker image for testing WordPress themes and plugins while migrating to Shifter. This image is also available on [Docker Hub](https://hub.docker.com/r/getshifter/shifter-local/).",
   "main": "docker-compose.yml",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker-compose up",
+    "stop": "docker-compose down",
+    "clean": "docker-compose rm",
+    "reset": "docker-compose rm && rm -rf volume"
   },
   "repository": {
     "type": "git",
