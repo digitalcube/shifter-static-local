@@ -16,23 +16,24 @@ The following features, combined with the Shifter platform. do not work on Shift
   - Terminate, Generate, or etc...
 - Passwordless login
 
-## Requirements
-
-- docker
-- docker-compose
-
 ## Getting Started
 
+[Install Docker Desktop](https://www.docker.com/products/docker-desktop)
+
 ```
-git clone https://github.com/digitalcube/shifter-static-local.git
+git clone https://github.com/digitalcube/shifter-static-local.git my-shifter-site
 ```
 
 ```
-cd shifter-local
+cd my-shifter-site
 ```
 
 ```
 docker-compose up
+
+or
+
+npm run start
 ```
 
 Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
