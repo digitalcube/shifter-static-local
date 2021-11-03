@@ -1,0 +1,4 @@
+version: '3'
+services:
+  mysql:
+    platform: linux/x86_64

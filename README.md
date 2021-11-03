@@ -44,7 +44,11 @@ to run in the background, use `-d` option.
 ```
 docker-compose up -d
 ```
+### Apple Silicon
 
+```
+docker-compose -f docker-compose.yml -f docker-compose_arm64.yml up
+```
 
 ### Linux
 
