@@ -36,6 +36,25 @@ or
 npm run start
 ```
 
+### Experimental
+
+Testing "Create Shifter Site" (Similar to Create React App npx create-react-app)
+
+Step 1:
+```
+git clone --branch feature/scripts https://github.com/digitalcube/shifter-static-local my-shifter-site
+```
+
+Step 2:
+```
+cd my-shifter-site
+```
+
+Step 3:
+```
+npm run start
+```
+
 Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
 
 Use `Ctl + C` in your terminal window to stop running containers.
