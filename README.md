@@ -16,34 +16,55 @@ The following features, combined with the Shifter platform. do not work on Shift
   - Terminate, Generate, or etc...
 - Passwordless login
 
-## Requirements
-
-- docker
-- docker-compose
-
 ## Getting Started
 
+[Install Docker Desktop](https://www.docker.com/products/docker-desktop)
+
 ```
-git clone https://github.com/digitalcube/shifter-static-local.git
+git clone https://github.com/digitalcube/shifter-static-local.git my-shifter-site
 ```
+
 ```
-cd shifter-local
+cd my-shifter-site
 ```
 
 ```
 docker-compose up
+
+or
+
+npm run start
+```
+
+### Experimental
+
+Testing "Create Shifter Site" (Similar to Create React App npx create-react-app)
+
+Step 1:
+```
+git clone --branch feature/scripts https://github.com/digitalcube/shifter-static-local my-shifter-site
+```
+
+Step 2:
+```
+cd my-shifter-site
+```
+
+Step 3:
+```
+npm run start
 ```
 
 Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
 
 Use `Ctl + C` in your terminal window to stop running containers.
 
-
 to run in the background, use `-d` option.
 
 ```
 docker-compose up -d
 ```
+
 ### Apple Silicon
 
 ```
@@ -68,6 +89,17 @@ You can use any tag from the following provided.
 
 - `latest`, `7.4`: Similar as Shifter production environment.
 - `develop`: development edge.
+
+### NPM Scripts
+
+NPM scripts are also available.
+
+```
+npm run start     # Starts site
+npm run stop      # Stops site
+npm run clean     # Deletes Docker data
+npm run reset     # Deletes all data
+```
 
 ### Change base PHP version
 
@@ -158,10 +190,9 @@ $ docker-compose exec --workdir /var/www/html/web/wp --user www-data wp /usr/loc
 Success: WordPress updated successfully.
 ```
 
-
 ## Considerations
 
-- Depending on your local environment mail functions may send from this container.  Example: Under `Outbound Port 25 Blocking`
+- Depending on your local environment mail functions may send from this container. Example: Under `Outbound Port 25 Blocking`
 
 ## Disclaimer
 
