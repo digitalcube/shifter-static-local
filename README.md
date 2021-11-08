@@ -41,16 +41,19 @@ npm run start
 Testing "Create Shifter Site" (Similar to Create React App npx create-react-app)
 
 Step 1:
+
 ```
 git clone --branch feature/scripts https://github.com/digitalcube/shifter-static-local my-shifter-site
 ```
 
 Step 2:
+
 ```
 cd my-shifter-site
 ```
 
 Step 3:
+
 ```
 npm run start
 ```
@@ -67,8 +70,18 @@ docker-compose up -d
 
 ### Apple Silicon
 
+[Docker Desktop for Apple Silicon](https://docs.docker.com/desktop/mac/apple-silicon/)
+
+Using the docker-compose.yml config file.
+
 ```
 docker-compose -f docker-compose.yml -f docker-compose_arm64.yml up
+```
+
+Using the Docker platform flag.
+
+```
+docker-compose -f docker-compose.yml up --platform linux/amd64
 ```
 
 ### Linux
