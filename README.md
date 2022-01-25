@@ -13,7 +13,7 @@ Shifter-Local is released for the purpose of only checking the operation of Word
 The following features, combined with the Shifter platform. do not work on Shifter-Local.
 
 - All Shifter menus in WordPress dashboard
-  - Terminate, Generate, or etc...
+- Terminate, Generate, or etc...
 - Passwordless login
 
 ## Getting Started
@@ -123,7 +123,7 @@ modify `docker-compose.yml` like below
 +    image: getshifter/shifter_local:7.4
 ```
 
-- avaliable tags => [getshifter/shifter_local Tags - Docker Hub](https://hub.docker.com/r/getshifter/shifter_local/tags)
+- available tags => [getshifter/shifter_local Tags - Docker Hub](https://hub.docker.com/r/getshifter/shifter_local/tags)
 
 ### Storage
 
