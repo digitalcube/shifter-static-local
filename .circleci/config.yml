@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   slack: circleci/slack@3.4
+  docker: circleci/docker@2.6
 
 jobs:
   build:
@@ -14,6 +15,7 @@ jobs:
     #       password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
+      - docker/install-docker-compose
       # - setup_remote_docker
       - run:
           name: compose pull for use latest
