@@ -23,6 +23,7 @@ services:
     image: mariadb:10.3
     platform: linux/arm64
     environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=true
       - MARIADB_ALLOW_EMPTY_PASSWORD=true
       - MARIADB_USER=shifter
       - MARIADB_PASSWORD=pass

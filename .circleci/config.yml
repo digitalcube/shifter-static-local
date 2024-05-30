@@ -19,7 +19,7 @@ jobs:
       # - setup_remote_docker
       - run:
           name: compose pull for use latest
-          command: docker-compose pull
+          command: docker-compose pull -f docker-compose.ci.yml
       - run:
           name: Start container and verify it's working
           command: |
