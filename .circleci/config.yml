@@ -24,9 +24,9 @@ jobs:
           name: Start container and verify it's working
           command: |
             set -x
-            docker-compose -f docker-compose.yml -f docker-compose_linux.yml up -d
-            sleep 30
-            docker-compose exec wp curl -ksfI --retry 20 --retry-delay 5 --retry-connrefused https://127.0.0.1/wp-admin/install.php
+            docker-compose -f docker-compose.ci.yml up -d
+            sleep 60
+            docker-compose -f docker-compose.ci.yml exec wp curl -ksfI --retry 20 --retry-delay 5 --retry-connrefused https://127.0.0.1/wp-admin/install.php
       - slack/status:
           fail_only: true
 

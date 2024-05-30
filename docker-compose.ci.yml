@@ -1,0 +1,33 @@
+version: '3'
+services:
+  wp:
+    image: getshifter/shifter_local:latest
+    platform: linux/arm64
+    user: root
+    links:
+      - mysql
+    ports:
+      - 8443:443
+    volumes:
+      - "app:/var/www/html/web/wp/wp-content"
+    environment:
+      - SERVICE_PORT=8443
+      # - SERVICE_DOMAIN=127.0.0.1
+      - RDB_ENDPOINT=mysql:3306
+      - RDB_USER=shifter
+      - RDB_PASSWD=pass
+      - SHIFTER_LOCAL=true
+      # - SITE_SUBDIR=subdirpath # run /subdirpath
+      # - SERVICE_TYPE=generator # to simulate generator environment
+  mysql:
+    image: mariadb:10.3
+    platform: linux/arm64
+    environment:
+      - MARIADB_ALLOW_EMPTY_PASSWORD=true
+      - MARIADB_USER=shifter
+      - MARIADB_PASSWORD=pass
+      - MARIADB_DATABASE=wordpress
+    volumes:
+      - "db:/var/lib/mysql"
+    command:
+      - --sql-mode=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION

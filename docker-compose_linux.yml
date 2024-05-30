@@ -4,7 +4,8 @@ services:
     volumes:
       - "app:/var/www/html/web/wp/wp-content"
   mysql:
-    image: mysql:5.6
+    image: mysql:5.7
+    platform: linux/amd64
     volumes:
       - "db:/var/lib/mysql"
 
