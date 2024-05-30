@@ -3,6 +3,7 @@ services:
   wp:
     image: getshifter/shifter_local:latest
     platform: linux/amd64
+    user: root
     links:
       - mysql
     ports:
