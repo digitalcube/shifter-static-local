@@ -16,6 +16,9 @@ The following features, combined with the Shifter platform. do not work on Shift
 - Terminate, Generate, or etc...
 - Passwordless login
 
+> Currently only environments capable of running `linux/arm64` platforms are supported due to build reasons.
+> As soon as the problem is resolved, we will provide `linux/amd64`, and `linux/arm64`.
+
 ## Getting Started
 
 [Install Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -75,13 +78,7 @@ docker-compose up -d
 Using the docker-compose.yml config file.
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose_arm64.yml up
-```
-
-Using the Docker platform flag.
-
-```
-docker-compose -f docker-compose.yml up --platform linux/amd64
+docker-compose -f docker-compose.yml
 ```
 
 ### Linux
@@ -100,8 +97,7 @@ docker-compose pull
 
 You can use any tag from the following provided.
 
-- `latest`, `7.4`: Similar as Shifter production environment.
-- `develop`: development edge.
+- `latest`: Similar as Shifter production environment.
 
 ### NPM Scripts
 
@@ -113,17 +109,6 @@ npm run stop      # Stops site
 npm run clean     # Deletes Docker data
 npm run reset     # Deletes all data
 ```
-
-### Change base PHP version
-
-modify `docker-compose.yml` like below
-
-```
--    image: getshifter/shifter_local:latest
-+    image: getshifter/shifter_local:7.4
-```
-
-- available tags => [getshifter/shifter_local Tags - Docker Hub](https://hub.docker.com/r/getshifter/shifter_local/tags)
 
 ### Storage
 
