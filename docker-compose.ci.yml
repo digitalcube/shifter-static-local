@@ -22,11 +22,11 @@ services:
     image: mysql:8.0
     platform: linux/arm64
     environment:
-      - MARIADB_RANDOM_ROOT_PASSWORD=true
-      - MARIADB_ALLOW_EMPTY_PASSWORD=true
-      - MARIADB_USER=shifter
-      - MARIADB_PASSWORD=pass
-      - MARIADB_DATABASE=wordpress
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=shifter
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=wordpress
     volumes:
       - "db:/var/lib/mysql"
     command:
