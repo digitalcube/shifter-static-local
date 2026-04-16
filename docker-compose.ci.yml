@@ -20,7 +20,7 @@ services:
       # - SITE_SUBDIR=subdirpath # run /subdirpath
       # - SERVICE_TYPE=generator # to simulate generator environment
   mysql:
-    image: mariadb:10.3
+    image: mysql:8.0
     platform: linux/arm64
     environment:
       - MARIADB_RANDOM_ROOT_PASSWORD=true
@@ -31,7 +31,7 @@ services:
     volumes:
       - "db:/var/lib/mysql"
     command:
-      - --sql-mode=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+      - --sql-mode=STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION
 
 volumes:
   app:
