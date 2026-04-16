@@ -1,4 +1,3 @@
-version: '4'
 services:
   wp:
     image: getshifter/shifter_local:latest
